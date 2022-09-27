@@ -1,17 +1,17 @@
-#this is anguessing game
-age = 16
+#this is a guessing game
 
-try:
-    age = input("Enter your age to continue.")
-    print(age)
-except:
-    print("something went wrong,Please try again.")
+import random
+n = random.randint(1, 100)
 
-age = int(age)
-print(age)
-if age > 16:
-    print("congs you qualify to play this game.")
-elif age == 16:
-    print("wow!! welcome to the guessing game.")
+age = (input("Guess my age: "))
+
+if age.isdigit():
+    if int(age) > n:
+        print("wow! I'm not that old")
+    elif int(age) < n:
+        print("Geez! I'm way older than that")
+    else:
+        print("You guessed it right")
+        
 else:
-    print("We are sorry, you aint ligible to play this game")
+    print("WTF are you doing?")
